@@ -19,9 +19,10 @@
 	
 	<script>
 	
-		function teleturniej()
-		{
+		function teleturniej(){
 			var lucky = Math.floor(Math.random() * 3) + 1;
+            var bramka = document.getElementById("bramka").value;
+            document.getElementById("wynik").innerHTML = (bramka == lucky) ? "Hurra! W bramce nr "+lucky+" jest samochód!" : "Niestety! Samochód znajdował się w bramce nr "+lucky;
 			
 		}
 
