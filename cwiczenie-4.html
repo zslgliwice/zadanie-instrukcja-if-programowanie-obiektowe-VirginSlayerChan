@@ -26,8 +26,46 @@
 			var a = document.getElementById('a').value;
 			var b = document.getElementById('b').value;
 			var c = document.getElementById('c').value;
-			
-			
+            var min="<p>Liczba Minimalna to: ";
+            var max="<p>Liczba Maksymalna to: ";
+            var bezwa="<p>Wartość bezwględna z a wynosi: ";
+            var bezwb="<p>Wartość bezwględna z b wynosi:  ";
+            var bezwc="<p>Wartość bezwględna z c wynosi:  ";
+            var aparz="<p>aparz ";
+            var bparz="<p>bparz ";
+            var cparz="<p>cparz ";
+			a = parseInt(a);
+			b = parseInt(b);
+			c = parseInt(c);
+            const x = Math.min(a,b,c);
+            const y = Math.max(a,b,c);
+            const aa = Math.abs(a);
+            const bb= Math.abs(b);
+            const cc = Math.abs(c);
+            if(a%2==0){
+                aparz = "<p>Liczba a jest Parzysta"
+            }
+            if(a%2!=0){
+                aparz = "<p>Liczba a jest Nieparzysta"
+            }
+            if(b%2==0){
+                bparz = "<p>Liczba b jest Parzysta"
+            }
+            if(b%2!=0){
+                bparz = "<p>Liczba b jest Nieparzysta"
+            }
+            if(c%2==0){
+                cparz = "<p>Liczba c jest Parzysta"
+            }
+            if(c%2!=0){
+                cparz = "<p>Liczba c jest Nieparzysta"
+            }
+            min += x;
+            max += y;
+            bezwa += aa;
+            bezwb += bb;
+            bezwc += cc;
+            document.getElementById("wynik").innerHTML = min+max+bezwa+bezwb+bezwc+aparz+bparz+cparz;
 		}
 
 	</script>
