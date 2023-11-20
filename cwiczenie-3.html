@@ -19,11 +19,47 @@
 	
 	<script>
 	
-		function ktora_cwiartka()
-		{
-			
+		function ktora_cwiartka(){
+            var x = document.getElementById("x").value;
+            var y = document.getElementById("y").value;
+            var punkt ="";
+			x = parseInt(x);
+			y = parseInt(y);
+            
+
+            if(x == 0 && y == 0){
+                punkt ="Punkt P=(0,0) jest początkiem układu współrzędnych";
+                document.getElementById("wynik").innerHTML = punkt;
+            }
+            if(x== 0 || y== 0 ){
+                punkt ="Punkt leży na jednej z osi układu";
+                document.getElementById("wynik").innerHTML = punkt;
+            }
+            if(x>0 && y>0 ){
+                punkt ="Punkt leży w pierwszej ćwiartce";
+                document.getElementById("wynik").innerHTML = punkt;
+            }
+            if(x<0 && y>0){
+                punkt ="Punkt leży w drugiej ćwiartce";
+                document.getElementById("wynik").innerHTML = punkt;
+            }
+            if(x<0 && y<0){
+                punkt ="Punkt leży w trzeciej ćwiartce";
+                document.getElementById("wynik").innerHTML = punkt;
+            }
+            if(x>0 && y<0){
+                punkt ="Punkt leży w czwartej ćwiartce";
+                document.getElementById("wynik").innerHTML = punkt;
+            }
+            if(x == 15 && y == 96){
+                punkt ="René Descartes, łac. Renatus Cartesius, po polsku Kartezjusz, – francuski uczony: matematyk, fizyk i filozof, jeden z najwybitniejszych intelektualistów XVII wieku, uznawany również za ojca filozofii nowożytnej. ";
+                document.getElementById("wynik").innerHTML = punkt;
+            }
+
+
 			
 		}
+        
 
 	</script>
 
